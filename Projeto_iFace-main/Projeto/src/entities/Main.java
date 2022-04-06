@@ -386,10 +386,30 @@ public class Main {
 						    case 9:
 						    	System.out.println("Informe o nome da comunidade:");
 								String nomCom = sc.nextLine();
-								System.out.println("Informe a descricao da comunidade:");
-								String descCom = sc.nextLine();
-								listCom.add(new Comunidade(nomCom, descCom, loginConta));
-								System.out.println("Comunidade criada com sucesso.");
+								int tamanhoListaCom2 = listCom.size();
+					    		int aux22 = tamanhoListaCom2;
+					    		if(aux22 == 0) {
+					    			System.out.println("Informe a descrição da comunidade:");
+						            String descCom = sc.nextLine();
+						            listCom.add(new Comunidade(nomCom, descCom, loginConta));
+						            System.out.println("Comunidade criada com sucesso.");
+					    		} else {
+					    			for(Comunidade val2 : listCom) {
+						    			if(nomCom.contentEquals(val2.getNome()) == true) {
+						    				System.out.println("Uma comunidade já existe com esse nome.");
+						    			} else {
+						    				aux22--;
+						    			}
+						    		}
+					    			if(aux22 == 0) {
+						    	        System.out.println("Informe a descrição da comunidade:");
+									    String descCom = sc.nextLine();
+									    listCom.add(new Comunidade(nomCom, descCom, loginConta));
+									    System.out.println("Comunidade criada com sucesso.");
+						    		}
+					    		}
+								
+								
 						    break;
 						    case 10:
 						    	if(listCom.size() == 0) {
