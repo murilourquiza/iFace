@@ -2,28 +2,31 @@ package entities;
 
 public class Amizades {
 	
-	private String amigo1;
-	private String amigo2;
+	private String usuario1;
+	private String usuario2;
 	
-	public Amizades(String amigo1, String amigo2) {
-		this.amigo1 = amigo1;
-		this.amigo2 = amigo2;
+	public Amizades() {
 	}
 
-	public String getAmigo1() {
-		return amigo1;
+	public Amizades(String usuario1, String usuario2) {
+		this.usuario1 = usuario1;
+		this.usuario2 = usuario2;
 	}
 
-	public void setAmigo1(String amigo1) {
-		this.amigo1 = amigo1;
+	public String getUsuario1() {
+		return usuario1;
 	}
 
-	public String getAmigo2() {
-		return amigo2;
+	public void setUsuario1(String usuario1) {
+		this.usuario1 = usuario1;
 	}
 
-	public void setAmigo2(String amigo2) {
-		this.amigo2 = amigo2;
+	public String getUsuario2() {
+		return usuario2;
+	}
+
+	public void setUsuario2(String usuario2) {
+		this.usuario2 = usuario2;
 	}
 
 }

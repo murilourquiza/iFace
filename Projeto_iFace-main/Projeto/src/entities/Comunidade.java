@@ -9,7 +9,9 @@ public class Comunidade {
 	public String descricao;
 	public String loginDono;
 	
-	List<String> membros = new ArrayList<>();
+	private List<String> membros = new ArrayList<>();
+	
+	private List<InformacaoMensagem> mensagens = new ArrayList<>();
 	
 	public Comunidade(String nome, String descricao, String loginDono) {
 		this.nome = nome;
@@ -41,12 +43,24 @@ public class Comunidade {
 		this.loginDono = loginDono;
 	}
 
+	public List<InformacaoMensagem> getMensagens() {
+		return mensagens;
+	}
+
 	public void addMembro(String login) {
 		membros.add(login);
 	}
 	
 	public void removeMembro(String login) {
 		membros.remove(login);
+	}
+	
+	public void addMensagem(InformacaoMensagem mensagem) {
+		mensagens.add(mensagem);
+	}
+	
+	public void removeMensagem(InformacaoMensagem mensagem) {
+		mensagens.remove(mensagem);
 	}
 	
 	public int buscarMembro(String loginDesejado) {
@@ -59,7 +73,7 @@ public class Comunidade {
 	}
 	
 	public String toString() {
-		return "Comunidade: " + nome + " .Descricao: " + descricao + " .Login do Dono: " + loginDono + " .Membros: " + membros;
+		return "Comunidade: " + nome + ". Descricao: " + descricao + ". Login do Dono: " + loginDono + ". Membros: " + membros + ". Mensagens: " + mensagens;
 	}
 	
 }

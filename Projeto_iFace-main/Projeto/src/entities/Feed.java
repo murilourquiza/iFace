@@ -3,17 +3,19 @@ package entities;
 import java.util.ArrayList;
 import java.util.List;
 
+import entities.enums.PermissaoFeed;
+
 public class Feed {
 	
 	private String login;
-	private String permissao;
+	private PermissaoFeed permissao;
 	
 	List<String> mensagem = new ArrayList<>();
 	
 	public Feed() {
 	}
 
-	public Feed(String login, String permissao) {
+	public Feed(String login, PermissaoFeed permissao) {
 		this.login = login;
 		this.permissao = permissao;
 	}
@@ -26,11 +28,11 @@ public class Feed {
 		this.login = login;
 	}
 	
-	public String getPermissao() {
+	public PermissaoFeed getPermissao() {
 		return permissao;
 	}
 
-	public void setPermissao(String permissao) {
+	public void setPermissao(PermissaoFeed permissao) {
 		this.permissao = permissao;
 	}
 	

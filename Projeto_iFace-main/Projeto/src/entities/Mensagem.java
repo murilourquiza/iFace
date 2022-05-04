@@ -1,31 +1,16 @@
 package entities;
 
-public class Mensagem {
+public abstract class Mensagem extends InformacaoMensagem {
 	
-	private String loginItinerario;
-	private String mensagem;
 	private String loginDestinatario;
 	
+	public Mensagem() {
+		super();
+	}
+
 	public Mensagem(String loginItinerario, String mensagem, String loginDestinatario) {
-		this.loginItinerario = loginItinerario;
-		this.mensagem = mensagem;
+		super(loginItinerario, mensagem);
 		this.loginDestinatario = loginDestinatario;
-	}
-
-	public String getLoginItinerario() {
-		return loginItinerario;
-	}
-
-	public void setLoginItinerario(String loginItinerario) {
-		this.loginItinerario = loginItinerario;
-	}
-
-	public String getMensagem() {
-		return mensagem;
-	}
-
-	public void setMensagem(String mensagem) {
-		this.mensagem = mensagem;
 	}
 
 	public String getLoginDestinatario() {
@@ -35,9 +20,4 @@ public class Mensagem {
 	public void setLoginDestinatario(String loginDestinatario) {
 		this.loginDestinatario = loginDestinatario;
 	}
-	
-	public String toString() {
-		return "Itinerario: " + loginItinerario + " .Mensagem: " + mensagem + " .Destinatário: " + loginDestinatario;
-	}
-
 }
